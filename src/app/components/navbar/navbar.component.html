@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">HW05 from lesson 6</a>
+
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a class="nav-link" routerLink="/">Home</a>
+      </li>
+
+      <li class="nav-item"  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a class="nav-link"  routerLink="/about">About</a>
+      </li>
+
+    </ul>
+  </div>
+
+  <div class="navbar-text">
+    Total Todos:
+    <span [ngStyle]="{'color': (postsCount % 2 === 0) ? 'red' : 'green', 'font-weight' : 'bold'}">{{ 200 }}</span>
+    | Today Date:
+    <span [ngStyle]="{'color': 'white'}">{{ today | date : 'mediumDate' }}</span>
+  </div>
+
+</nav>
