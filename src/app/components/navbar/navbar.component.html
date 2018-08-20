@@ -17,7 +17,7 @@
 
   <div class="navbar-text">
     Total Todos:
-    <span [ngStyle]="{'color': (postsCount % 2 === 0) ? 'red' : 'green', 'font-weight' : 'bold'}">{{ 200 }}</span>
+    <span [ngStyle]="{'color': (todosCount % 2 === 0) ? 'red' : 'green', 'font-weight' : 'bold'}">{{ todosCount }}</span>
     | Today Date:
     <span [ngStyle]="{'color': 'white'}">{{ today | date : 'mediumDate' }}</span>
   </div>

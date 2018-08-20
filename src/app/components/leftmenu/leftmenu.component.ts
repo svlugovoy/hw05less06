@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DataExchangeService} from '../../services/data-exchange.service';
 
 @Component({
   selector: 'app-leftmenu',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeftmenuComponent implements OnInit {
 
-  constructor() { }
+  todosCount: number;
+
+  constructor(
+    private dataExchangeService: DataExchangeService
+  ) { }
 
   ngOnInit() {
+    this.dataExchangeService.currentTodosCount.subscribe( count => {
+      this.todosCount = count;
+    });
   }
 
 }
